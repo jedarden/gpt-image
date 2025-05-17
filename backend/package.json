@@ -1,0 +1,57 @@
+{
+  "//": "Backend package.json for Node.js/TypeScript/Express API. Includes all required dependencies, devDependencies, and scripts for development, build, production, and testing. See prompts_LS3.md and test_specs_LS3.md for requirements.",
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend API server for the project (Node.js, TypeScript, Express, Jest, Supertest).",
+  "main": "dist/server.js",
+  "scripts": {
+    "//": {
+      "dev": "Start backend in development mode with live reload (nodemon + ts-node).",
+      "build": "Compile TypeScript to JavaScript (output to dist/).",
+      "start": "Run compiled backend in production mode from dist/.",
+      "test": "Run all backend tests using Jest (with ts-jest)."
+    },
+    "dev": "nodemon --watch 'src/**/*.ts' --exec ts-node src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "axios": "^1.6.8",
+    "express-rate-limit": "^7.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5",
+    "ts-node": "^10.9.2",
+    "nodemon": "^3.1.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "supertest": "^7.1.1",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.30",
+    "@types/jest": "^29.5.12",
+    "@types/supertest": "^2.0.16"
+  },
+  "//_dependencies": {
+    "express": "Web framework for Node.js server.",
+    "axios": "Promise-based HTTP client for making API requests.",
+    "express-rate-limit": "Middleware for rate limiting API requests."
+  },
+  "//_devDependencies": {
+    "typescript": "TypeScript language support.",
+    "ts-node": "Run TypeScript files directly in Node.js.",
+    "nodemon": "Auto-restart server on file changes during development.",
+    "jest": "JavaScript/TypeScript testing framework.",
+    "ts-jest": "Jest transformer for TypeScript.",
+    "supertest": "HTTP assertions for integration testing Express APIs.",
+    "@types/express": "TypeScript types for Express.",
+    "@types/node": "TypeScript types for Node.js.",
+    "@types/jest": "TypeScript types for Jest.",
+    "@types/supertest": "TypeScript types for Supertest."
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}

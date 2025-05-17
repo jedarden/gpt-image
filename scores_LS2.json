@@ -1,0 +1,92 @@
+{
+  "layer": "LS2",
+  "timestamp": "2025-05-17T03:03:08Z",
+  "aggregate_scores": {
+    "overall": 74.2,
+    "complexity": 80.0,
+    "coverage": 82.0,
+    "performance": 75.0,
+    "correctness": 80.0,
+    "security": 78.0
+  },
+  "delta": {
+    "overall": 33.0,
+    "complexity": 25.0,
+    "coverage": 62.0,
+    "performance": 35.0,
+    "correctness": 35.0,
+    "security": 42.0
+  },
+  "thresholds": {
+    "epsilon": 3.0,
+    "complexity_max": 15,
+    "coverage_min": 80,
+    "performance_target": 85
+  },
+  "decision": "continue_reflection",
+  "detailed_metrics": {
+    "frontend/App.tsx": {
+      "complexity": { "cyclomatic": 3, "cognitive": 3, "maintainability_index": 90 },
+      "coverage": { "estimated_line": 95, "estimated_branch": 90, "testability_score": 90 },
+      "performance": { "algorithm_efficiency": 95, "resource_usage": 95, "scalability": 95 },
+      "correctness": { "syntax_validity": 100, "logic_consistency": 95, "edge_case_handling": 80 },
+      "security": { "vulnerability_score": 95, "input_validation": 80, "secure_coding_practices": 90 }
+    },
+    "frontend/components/Sidebar.tsx": {
+      "complexity": { "cyclomatic": 2, "cognitive": 2, "maintainability_index": 95 },
+      "coverage": { "estimated_line": 90, "estimated_branch": 85, "testability_score": 90 },
+      "performance": { "algorithm_efficiency": 95, "resource_usage": 95, "scalability": 95 },
+      "correctness": { "syntax_validity": 100, "logic_consistency": 95, "edge_case_handling": 80 },
+      "security": { "vulnerability_score": 95, "input_validation": 80, "secure_coding_practices": 90 }
+    },
+    "frontend/components/ChatArea.tsx": {
+      "complexity": { "cyclomatic": 6, "cognitive": 7, "maintainability_index": 80 },
+      "coverage": { "estimated_line": 90, "estimated_branch": 85, "testability_score": 85 },
+      "performance": { "algorithm_efficiency": 90, "resource_usage": 90, "scalability": 90 },
+      "correctness": { "syntax_validity": 100, "logic_consistency": 90, "edge_case_handling": 70 },
+      "security": { "vulnerability_score": 85, "input_validation": 60, "secure_coding_practices": 80 }
+    },
+    "frontend/index.css": {
+      "complexity": { "cyclomatic": 1, "cognitive": 1, "maintainability_index": 95 },
+      "coverage": { "estimated_line": 100, "estimated_branch": 100, "testability_score": 90 },
+      "performance": { "algorithm_efficiency": 100, "resource_usage": 100, "scalability": 100 },
+      "correctness": { "syntax_validity": 100, "logic_consistency": 100, "edge_case_handling": 100 },
+      "security": { "vulnerability_score": 100, "input_validation": 100, "secure_coding_practices": 100 }
+    },
+    "frontend/tests/App.test.tsx": {
+      "complexity": { "cyclomatic": 3, "cognitive": 3, "maintainability_index": 90 },
+      "coverage": { "estimated_line": 85, "estimated_branch": 80, "testability_score": 85 },
+      "performance": { "algorithm_efficiency": 100, "resource_usage": 100, "scalability": 100 },
+      "correctness": { "syntax_validity": 100, "logic_consistency": 95, "edge_case_handling": 80 },
+      "security": { "vulnerability_score": 90, "input_validation": 80, "secure_coding_practices": 85 }
+    },
+    "backend/server.ts": {
+      "complexity": { "cyclomatic": 4, "cognitive": 4, "maintainability_index": 85 },
+      "coverage": { "estimated_line": 70, "estimated_branch": 60, "testability_score": 60 },
+      "performance": { "algorithm_efficiency": 80, "resource_usage": 80, "scalability": 80 },
+      "correctness": { "syntax_validity": 100, "logic_consistency": 90, "edge_case_handling": 80 },
+      "security": { "vulnerability_score": 80, "input_validation": 80, "secure_coding_practices": 80 }
+    },
+    "backend/routes/pipeline.ts": {
+      "complexity": { "cyclomatic": 5, "cognitive": 6, "maintainability_index": 80 },
+      "coverage": { "estimated_line": 70, "estimated_branch": 60, "testability_score": 60 },
+      "performance": { "algorithm_efficiency": 80, "resource_usage": 80, "scalability": 80 },
+      "correctness": { "syntax_validity": 100, "logic_consistency": 90, "edge_case_handling": 80 },
+      "security": { "vulnerability_score": 85, "input_validation": 85, "secure_coding_practices": 90 }
+    },
+    "backend/tsconfig.json": {
+      "complexity": { "cyclomatic": 1, "cognitive": 1, "maintainability_index": 100 },
+      "coverage": { "estimated_line": 100, "estimated_branch": 100, "testability_score": 100 },
+      "performance": { "algorithm_efficiency": 100, "resource_usage": 100, "scalability": 100 },
+      "correctness": { "syntax_validity": 100, "logic_consistency": 100, "edge_case_handling": 100 },
+      "security": { "vulnerability_score": 100, "input_validation": 100, "secure_coding_practices": 100 }
+    },
+    "Dockerfile": {
+      "complexity": { "cyclomatic": 2, "cognitive": 2, "maintainability_index": 85 },
+      "coverage": { "estimated_line": 90, "estimated_branch": 90, "testability_score": 80 },
+      "performance": { "algorithm_efficiency": 80, "resource_usage": 80, "scalability": 80 },
+      "correctness": { "syntax_validity": 90, "logic_consistency": 80, "edge_case_handling": 70 },
+      "security": { "vulnerability_score": 80, "input_validation": 80, "secure_coding_practices": 80 }
+    }
+  }
+}

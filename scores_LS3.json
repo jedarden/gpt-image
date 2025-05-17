@@ -1,0 +1,87 @@
+{
+  "layer": "LS3",
+  "timestamp": "2025-05-17T12:44:27Z",
+  "aggregate_scores": {
+    "overall": 80.1,
+    "complexity": 83.0,
+    "coverage": 89.0,
+    "performance": 78.5,
+    "correctness": 87.0,
+    "security": 85.0,
+    "accessibility": 82.0,
+    "maintainability": 84.0
+  },
+  "delta": {
+    "overall": 5.9,
+    "complexity": 3.0,
+    "coverage": 7.0,
+    "performance": 3.5,
+    "correctness": 7.0,
+    "security": 7.0,
+    "accessibility": 4.0,
+    "maintainability": 4.0
+  },
+  "thresholds": {
+    "epsilon": 3.0,
+    "complexity_max": 15,
+    "coverage_min": 80,
+    "performance_target": 85
+  },
+  "decision": "proceed_to_code",
+  "detailed_metrics": {
+    "frontend/App.tsx": {
+      "complexity": { "cyclomatic": 3, "cognitive": 3, "maintainability_index": 90 },
+      "coverage": { "estimated_line": 98, "estimated_branch": 95, "testability_score": 95 },
+      "performance": { "algorithm_efficiency": 95, "resource_usage": 90, "scalability": 90 },
+      "correctness": { "syntax_validity": 100, "logic_consistency": 98, "edge_case_handling": 90 },
+      "security": { "vulnerability_score": 95, "input_validation": 85, "secure_coding_practices": 90 },
+      "accessibility": { "aria_usage": 90, "keyboard_nav": 90, "focus_management": 85 },
+      "maintainability": { "modularity": 90, "doc_quality": 85, "style_consistency": 85 }
+    },
+    "frontend/components/Sidebar.tsx": {
+      "complexity": { "cyclomatic": 2, "cognitive": 2, "maintainability_index": 95 },
+      "coverage": { "estimated_line": 95, "estimated_branch": 90, "testability_score": 90 },
+      "performance": { "algorithm_efficiency": 95, "resource_usage": 95, "scalability": 95 },
+      "correctness": { "syntax_validity": 100, "logic_consistency": 95, "edge_case_handling": 90 },
+      "security": { "vulnerability_score": 95, "input_validation": 85, "secure_coding_practices": 90 },
+      "accessibility": { "aria_usage": 85, "keyboard_nav": 85, "focus_management": 80 },
+      "maintainability": { "modularity": 90, "doc_quality": 80, "style_consistency": 80 }
+    },
+    "frontend/components/ChatArea.tsx": {
+      "complexity": { "cyclomatic": 7, "cognitive": 8, "maintainability_index": 78 },
+      "coverage": { "estimated_line": 92, "estimated_branch": 88, "testability_score": 90 },
+      "performance": { "algorithm_efficiency": 85, "resource_usage": 80, "scalability": 80 },
+      "correctness": { "syntax_validity": 100, "logic_consistency": 92, "edge_case_handling": 85 },
+      "security": { "vulnerability_score": 85, "input_validation": 70, "secure_coding_practices": 80 },
+      "accessibility": { "aria_usage": 85, "keyboard_nav": 80, "focus_management": 75 },
+      "maintainability": { "modularity": 80, "doc_quality": 75, "style_consistency": 75 }
+    },
+    "frontend/components/MaskEditor.tsx": {
+      "complexity": { "cyclomatic": 6, "cognitive": 7, "maintainability_index": 75 },
+      "coverage": { "estimated_line": 85, "estimated_branch": 80, "testability_score": 80 },
+      "performance": { "algorithm_efficiency": 75, "resource_usage": 70, "scalability": 70 },
+      "correctness": { "syntax_validity": 100, "logic_consistency": 85, "edge_case_handling": 75 },
+      "security": { "vulnerability_score": 80, "input_validation": 70, "secure_coding_practices": 75 },
+      "accessibility": { "aria_usage": 70, "keyboard_nav": 70, "focus_management": 65 },
+      "maintainability": { "modularity": 75, "doc_quality": 70, "style_consistency": 70 }
+    },
+    "frontend/index.css": {
+      "complexity": { "cyclomatic": 1, "cognitive": 1, "maintainability_index": 95 },
+      "coverage": { "estimated_line": 100, "estimated_branch": 100, "testability_score": 90 },
+      "performance": { "algorithm_efficiency": 100, "resource_usage": 100, "scalability": 100 },
+      "correctness": { "syntax_validity": 100, "logic_consistency": 100, "edge_case_handling": 100 },
+      "security": { "vulnerability_score": 100, "input_validation": 100, "secure_coding_practices": 100 },
+      "accessibility": { "aria_usage": 90, "keyboard_nav": 90, "focus_management": 90 },
+      "maintainability": { "modularity": 95, "doc_quality": 90, "style_consistency": 90 }
+    },
+    "frontend/tests/App.test.tsx": {
+      "complexity": { "cyclomatic": 4, "cognitive": 4, "maintainability_index": 92 },
+      "coverage": { "estimated_line": 98, "estimated_branch": 95, "testability_score": 98 },
+      "performance": { "algorithm_efficiency": 100, "resource_usage": 100, "scalability": 100 },
+      "correctness": { "syntax_validity": 100, "logic_consistency": 98, "edge_case_handling": 95 },
+      "security": { "vulnerability_score": 95, "input_validation": 90, "secure_coding_practices": 90 },
+      "accessibility": { "aria_usage": 95, "keyboard_nav": 95, "focus_management": 95 },
+      "maintainability": { "modularity": 95, "doc_quality": 95, "style_consistency": 95 }
+    }
+  }
+}

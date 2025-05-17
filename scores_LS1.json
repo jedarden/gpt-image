@@ -1,0 +1,57 @@
+{
+  "layer": "LS1",
+  "timestamp": "2025-05-17T13:28:06Z",
+  "aggregate_scores": {
+    "overall": 54.0,
+    "complexity": 80.0,
+    "coverage": 0.0,
+    "performance": 75.0,
+    "correctness": 50.0,
+    "security": 70.0
+  },
+  "delta": {
+    "overall": 0.0,
+    "complexity": 0.0,
+    "coverage": 0.0,
+    "performance": 0.0,
+    "correctness": 0.0,
+    "security": 0.0
+  },
+  "thresholds": {
+    "epsilon": 3.0,
+    "complexity_max": 15,
+    "coverage_min": 80,
+    "performance_target": 85
+  },
+  "decision": "continue_reflection",
+  "detailed_metrics": {
+    "response_1": {
+      "id": "LS1_1",
+      "complexity": {
+        "cyclomatic": 4,
+        "cognitive": 5,
+        "maintainability_index": 78
+      },
+      "coverage": {
+        "estimated_line": 0,
+        "estimated_branch": 0,
+        "testability_score": 20
+      },
+      "performance": {
+        "algorithm_efficiency": 75,
+        "resource_usage": 75,
+        "scalability": 75
+      },
+      "correctness": {
+        "syntax_validity": 70,
+        "logic_consistency": 60,
+        "edge_case_handling": 20
+      },
+      "security": {
+        "vulnerability_score": 70,
+        "input_validation": 75,
+        "secure_coding_practices": 65
+      }
+    }
+  }
+}

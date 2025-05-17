@@ -1,0 +1,18 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/base:debian",
+    "features": {
+      "ghcr.io/devcontainers/features/node:1": {},
+      "ghcr.io/devcontainers/features/python:1": {}
+    },
+    "onCreateCommand": "npx create-sparc init --force",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+            "rooveterinaryinc.roo-cline",
+            "github.copilot"
+        ]
+      }
+    }
+  ,
+    "shutdownAction": "none"
+  }
