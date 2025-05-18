@@ -46,9 +46,41 @@ app.get("/api/health", (_req: Request, res: Response) => {
 });
 
 // Serve frontend (for Docker/stateless deployment, to be configured)
-const path = require("path");
-const staticDir = process.env.FRONTEND_BUILD_PATH || path.join(__dirname, "../../frontend/build");
+import path from "path";
+const staticDir = process.env.FRONTEND_BUILD_PATH
+  ? path.resolve(process.env.FRONTEND_BUILD_PATH)
+  : path.resolve(__dirname, "../../frontend/build");
+
+/**
+ * Static file path validation middleware.
+ * Prevents directory traversal and serving files outside staticDir.
+ */
+app.use((req: Request, res: Response, next: NextFunction) => {
+  if (req.method !== "GET" && req.method !== "HEAD") return next();
+  const requestedPath = req.path;
+  // Only check for static asset requests (not API or SPA fallback)
+  if (requestedPath.startsWith("/api/")) return next();
+  // Compute the absolute path of the requested file
+  const pathToCheck = path.resolve(staticDir, "." + requestedPath);
+  if (!pathToCheck.startsWith(staticDir)) {
+    // Attempted directory traversal or access outside staticDir
+    return res.status(403).json({ error: "Forbidden" });
+  }
+  next();
+});
+
+// Serve static files
 app.use(express.static(staticDir));
+
+// SPA catch-all: serve index.html for non-API, non-static routes
+app.get("*", (req: Request, res: Response, next: NextFunction) => {
+  // If the request is for an API route, skip
+  if (req.path.startsWith("/api/")) return next();
+  // If the request has a file extension, skip (likely a static asset)
+  if (path.extname(req.path)) return next();
+  res.sendFile(path.join(staticDir, "index.html"));
+});
+
 // 404 handler for unknown routes
 app.use((req: Request, res: Response, next: NextFunction) => {
   res.status(404).json({ error: "Not found" });

@@ -1,18 +1,32 @@
 # Use official Node.js LTS image
-FROM node:lts
+# Multi-stage production Dockerfile for backend (Node.js/TypeScript)
+# Stage 1: Build
+FROM node:18-alpine AS builder
 
-# Set working directory
-WORKDIR /usr/src/app
+WORKDIR /app
 
-# Install dependencies first (for better caching)
+# Install dependencies and build
 COPY package*.json ./
-RUN npm install
+RUN npm ci --omit=dev
 
-# Copy the rest of the backend code
 COPY . .
+RUN npm run build
+
+# Stage 2: Production image (minimal)
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Only copy production dependencies and built code
+COPY --from=builder /app/package*.json ./
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/dist ./dist
+
+# Set environment for production
+ENV NODE_ENV=production
 
 # Expose backend port
 EXPOSE 5000
 
-# Default command for development
-CMD ["npm", "run", "dev"]
+# Run the production server
+CMD ["node", "dist/server.js"]

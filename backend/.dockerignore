@@ -1,0 +1,19 @@
+# Ignore TypeScript config and test files
+tsconfig.json
+jest.config.js
+coverage/
+tests/
+*.md
+*.test.*
+*.spec.*
+# Ignore node_modules (should be installed in container)
+node_modules/
+# Ignore local env files
+.env
+.env.*
+# Ignore logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+# Ignore Dockerfile itself (optional)
+Dockerfile

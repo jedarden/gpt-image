@@ -19,3 +19,12 @@ This is meant to be a web application that allows users to use natural language 
 - API Keys should be securely kept server-side, and never exposed to the browser.
 - Between the chat interface and the gpt-image-1 model should be the gpt-4.1-nano model. The purpose of this intermediate model is to configure the inputs to the gpt-image-1 model. Examples include orientation (portrait / landscape), quality, etc. 
 - The image modal should allow users to add a mask to an image and that mask gets submitted to the gpt-image-1 model as a part of its context. 
+---
+
+## CI Security, Multi-Arch Build, and Deployment Requirements
+
+- **CI Security:** The project uses GitHub Actions with OIDC authentication for secure registry access and Trivy for automated vulnerability scanning of Docker images. The Trivy database cache key includes the Trivy version and OS for reliable, up-to-date scanning.
+- **Multi-Arch Build:** Docker images are built and published for both `linux/amd64` and `linux/arm64` using Docker Buildx and QEMU, ensuring compatibility with a wide range of deployment targets.
+- **Deployment:** Production deployment is via a single combined Docker image, running in `NODE_ENV=production` mode, exposing only one port. Static file path validation is enforced in the backend to prevent directory traversal attacks. Environment variables must be securely managed in all environments.
+
+---
